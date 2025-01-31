@@ -17,8 +17,8 @@ const features = [
     icon: Users
   },
   {
-    title: "No Middlemen, No Fees",
-    description: "Fully decentralized, eliminating traditional banking fees",
+    title: "No Middlemen",
+    description: "Fully decentralized",
     icon: Shield
   },
   {
@@ -30,8 +30,8 @@ const features = [
 
 const steps = [
   {
-    title: "Sign In with Your Wallet",
-    description: "No emails or passwords required",
+    title: "Sign In with Your Wallet or Email",
+    description: "Easy user onboarding with account abstraction",
     icon: Wallet
   },
   {
@@ -112,7 +112,9 @@ export default function Home() {
               className="mt-6 text-lg md:text-xl leading-8 text-gray-600 max-w-2xl mx-auto"
             >
               FundMate is the easiest way to send payments and messages seamlessly in Web3.
+              We handle the token swaps - you focus on the moments that matter.
             </motion.p>
+            
             <motion.div 
               variants={itemVariants}
               className="mt-10"
@@ -121,6 +123,9 @@ export default function Home() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="rounded-full bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-700 transition-colors"
+                onClick={() => {
+                  window.location.href = 'https://fund-mate-nine.vercel.app/';
+                }}
               >
                 Try FundMate
               </motion.button>
@@ -155,7 +160,7 @@ export default function Home() {
                 <FloatingAnimation>
                   <feature.icon className="w-12 h-12 text-blue-600 mb-4" />
                 </FloatingAnimation>
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <h3 className="text-xl text-gray-900 font-semibold mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
             ))}
@@ -191,7 +196,7 @@ export default function Home() {
                       <step.icon className="w-8 h-8 text-blue-600" />
                     </div>
                   </FloatingAnimation>
-                  <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                  <h3 className="text-xl text-gray-900 font-semibold mb-2">{step.title}</h3>
                   <p className="text-gray-600">{step.description}</p>
                 </div>
               </motion.div>
