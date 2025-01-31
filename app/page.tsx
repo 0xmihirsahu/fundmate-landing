@@ -148,7 +148,7 @@ const PhoneMockup = () => {
   ];
 
   return (
-    <div className="relative mx-auto w-[300px] h-[600px] bg-black rounded-[3rem] shadow-xl border-[7px] border-black overflow-hidden">
+    <div className="relative mx-auto w-[300px] h-[600px] bg-black rounded-[3rem] shadow-xl border-[5px] border-black overflow-hidden">
       <div className="absolute top-2 w-full h-0 bg-black">
         <div className="w-20 h-6 mx-auto bg-black rounded-3xl"></div>
       </div>
@@ -223,8 +223,9 @@ const Home = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="w-full sm:w-auto rounded-full bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-700 transition-colors"
+                  onClick={() => window.location.href="https://fund-mate-nine.vercel.app"}
                 >
-                  Get Started
+                  Try FundMate
                 </motion.button>
                 <div className="flex items-center gap-2">
                   <TokenIcon symbol="USDC" />
